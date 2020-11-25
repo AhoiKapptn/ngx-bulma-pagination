@@ -92,7 +92,7 @@ export class NgxBulmaPaginationComponent {
     if (!this.isActivePreviousEllipsis())
       return;
 
-    this.currentPage = Math.max(1, this.currentPage - this.count);
+    this.currentPage = Math.max(1, this.currentPage - 1);
     this.notifyChangedPage();
   }
 
@@ -100,7 +100,7 @@ export class NgxBulmaPaginationComponent {
     if (!this.isActiveNextEllipsis())
       return;
 
-    this.currentPage = Math.min(this.max, this.currentPage + this.count);
+    this.currentPage = Math.min(this.max, this.currentPage + 1);
     this.notifyChangedPage();
   }
 
